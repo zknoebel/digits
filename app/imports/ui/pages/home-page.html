@@ -1,39 +1,32 @@
-<template name="Home_Page">
-  <div class="ui container">
+    <template name="Home_Page">
+      <div class="ui text container">
+        {{#if Template.subscriptionsReady}}
+        <table style="margin-top: 20px" class="ui celled table">
+          <thead>
+          <tr>
+            <th>First</th>
+            <th>Last</th>
+            <th>Address</th>
+            <th>Telephone</th>
+            <th>Email</th>
+          </tr>
+          </thead>
 
-    <table style="margin-top: 20px;" class="ui celled table">
-      <thead>
-        <tr>
-          <th>First</th>
-          <th>Last</th>
-          <th>Address</th>
-          <th>Phone</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Zachery</td>
-          <td>Knoebel</td>
-          <td>Not a Fake Place, HI 96755</td>
-          <td>808-555-1234</td>
-          <td>zknoebel@hawaii.edu</td>
-        </tr>
-        <tr>
-          <td>David</td>
-          <td>Martin</td>
-          <td>Another Real Place, HI 96744</td>
-          <td>808-262-1345</td>
-          <td>dmartin@realemail.com</td>
-        </tr>
-        <tr>
-          <td>William</td>
-          <td>Wallace</td>
-          <td>Glenn Fiddach, MI 54673</td>
-          <td>262-893-1345</td>
-          <td>wwallace@realemail.com</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</template>
+          <tbody>
+          {{#each contacts in contactsList}}
+          <tr>
+            <td>{{contacts.first}}</td>
+            <td>{{contacts.last}}</td>
+            <td>{{contacts.address}}</td>
+            <td>{{contacts.telephone}}</td>
+            <td>{{contacts.email}}</td>
+            <td><a href="{{pathFor 'Edit_Contacts_Page' _id=contacts._id}}">Edit</a></td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+        {{else}}
+        {{> Loading}}
+        {{/if}}
+      </div>
+    </template>
