@@ -1,36 +1,29 @@
 <template name="Edit_Contact_Page">
+  {{#if Template.subscriptionsReady}}
   <div style="margin-top: 20px" class="ui container">
-    <form class="ui form">
+    <form class="ui form contact-data-form {{ errorClass }}">
       <h4 class="ui dividing header">Edit Contact</h4>
       <div class="field">
-        <label>Name</label>
         <div class="two fields">
-          <div class="field">
-            <input name="first" placeholder="First Name" type="text">
-          </div>
-          <div class="field">
-            <input name="last" placeholder="Last Name" type="text">
-          </div>
+          {{> Text_Form_Control label="First" required=true value=(contactDataField 'first') errorMessage=(fieldError "first")}}
+          {{> Text_Form_Control label="Last" required=true value=(contactDataField 'last') errorMessage=(fieldError "last")}}
         </div>
       </div>
 
       <div class="field">
-        <label>Address</label>
-        <input name="address" placeholder="Address" type="text">
+        {{> Text_Form_Control label="Address" required=true value=(contactDataField 'address') errorMessage=(fieldError "address")}}
       </div>
 
       <div class="field">
-        <label>Telephone/Email</label>
         <div class="two fields">
-          <div class="field">
-            <input name="telephone" placeholder="XXX-XXX-XXXX" type="text">
-          </div>
-          <div class="field">
-            <input name="email" placeholder="Email" type="text">
-          </div>
+          {{> Text_Form_Control label="Telephone" required=true value=(contactDataField 'telephone') errorMessage=(fieldError "telephone")}}
+          {{> Text_Form_Control label="Email" required=true value=(contactDataField 'email') errorMessage=(fieldError "email")}}
         </div>
       </div>
       <button class="ui button" type="submit">Update</button>
     </form>
   </div>
+  {{/if}}
 </template>
+
+
