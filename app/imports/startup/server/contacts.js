@@ -6,11 +6,11 @@ import { _ } from 'meteor/underscore';
  * @type {*[]}
  */
 const contactsSeeds = [
-  {first: 'Zac', last: 'Knoebel', address: 'Some place in Hawaii', telephone: '808-111-2345', email: 'zknoebel@hawaii.edu'},
-  {first: 'Dave', last: 'Wilson', address: 'Some other place in Hawaii', telephone: '345-111-2345', email: 'dwilson@hawaii.edu'},
-  {first: 'John', last: 'Marcos', address: 'Some place in Kansas', telephone: '453-111-2345', email: 'jmarcos@hawaii.edu'},
-  {first: 'Tyler', last: 'Warren', address: 'Some place in Texas', telephone: '674-111-2345', email: 'twarren@hawaii.edu'},
-  {first: 'Samael', last: 'Hope', address: 'Some place in Washington', telephone: '987-111-2345', email: 'shope@hawaii.edu'},
+  {first: 'Zac', last: 'Knoebel', address: 'Some place in Hawaii', telephone: '8081112345', email: 'zknoebel@hawaii.edu'},
+  {first: 'Dave', last: 'Wilson', address: 'Some other place in Hawaii', telephone: '3451112345', email: 'dwilson@hawaii.edu'},
+  {first: 'John', last: 'Marcos', address: 'Some place in Kansas', telephone: '4531112345', email: 'jmarcos@hawaii.edu'},
+  {first: 'Tyler', last: 'Warren', address: 'Some place in Texas', telephone: '6741112345', email: 'twarren@hawaii.edu'},
+  {first: 'Samael', last: 'Hope', address: 'Some place in Washington', telephone: '9871112345', email: 'shope@hawaii.edu'},
 ];
 
 /**
