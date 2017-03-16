@@ -5,22 +5,28 @@
       <h4 class="ui dividing header">Edit Contact</h4>
       <div class="field">
         <div class="two fields">
-          {{> Text_Form_Control label="First" required=true value=(contactDataField 'first') errorMessage=(fieldError "first")}}
-          {{> Text_Form_Control label="Last" required=true value=(contactDataField 'last') errorMessage=(fieldError "last")}}
+          {{> Text_Form_Control label="First" required=true value=(contactDataField 'first') errorMessage=(fieldError
+          "first")}}
+          {{> Text_Form_Control label="Last" required=true value=(contactDataField 'last') errorMessage=(fieldError
+          "last")}}
         </div>
       </div>
 
       <div class="field">
-        {{> Text_Form_Control label="Address" required=true value=(contactDataField 'address') errorMessage=(fieldError "address")}}
+        {{> Text_Form_Control label="Address" required=true value=(contactDataField 'address') errorMessage=(fieldError
+        "address")}}
       </div>
 
       <div class="field">
         <div class="two fields">
-          {{> Text_Form_Control label="Telephone" required=true value=(contactDataField 'telephone') errorMessage=(fieldError "telephone")}}
-          {{> Text_Form_Control label="Email" required=true value=(contactDataField 'email') errorMessage=(fieldError "email")}}
+          {{> Text_Form_Control label="Telephone" required=true value=(contactDataField 'telephone')
+          errorMessage=(fieldError "telephone")}}
+          {{> Text_Form_Control label="Email" required=true value=(contactDataField 'email') errorMessage=(fieldError
+          "email")}}
         </div>
       </div>
       <button class="ui button" type="submit">Update</button>
+      <button class="ui button delete" type="submit">Delete</button>
     </form>
   </div>
   {{/if}}
